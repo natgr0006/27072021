@@ -3,6 +3,7 @@ document.getElementById('first-name').value = '';
 var contButton = document.getElementById('continue');
 var sh = document.getElementById('shipping');
 var pay = document.getElementById('payment');
+var inf = document.getElementById('info');
 sh.disabled = true;
 pay.disabled = true;
 
@@ -90,11 +91,24 @@ function ValidName() {
 }
 
 function continueShipping() {
+	sh.click();
     sh.disabled = false;
-    sh.click();
+    
+	
 }
 
 function continuePay() {
-    pay.disabled = false;
-    pay.click();
+	pay.click();
+   pay.disabled = false;
+   
 }
+
+
+function backToCustomerInfo() {
+    inf.click();
+
+}
+
+/*$(function() {
+    $("#phone").mask("+38(999) 999-99-99");
+});*/
