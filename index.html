@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="tab">
+            <button class="tablinks" onclick="openCity(event, 'London')">01 CUSTOMER INFO</button>
+            <button class="tablinks" id="shipping" onclick="openCity(event, 'Paris')">02 SHIPPING INFO</button>
+            <button class="tablinks" id="payment" onclick="openCity(event, 'Tokyo')">03 PAYMENT SELECTION</button>
+        </div>
+
+        <div id="London" class="tabcontent">
+            <h3>Customer information</h3>
+            <label for="first-name">FIRST NAME</label>
+            <input type="text" id="first-name" required oninput="ValidName()" minlength="3">
+            <label for="first-name">LAST NAME</label>
+            <input type="text" id="last-name">
+            <label for="first-name">ADDRESS</label>
+            <input type="text" id="address">
+            <label for="select-country">Country</label>
+            <select name="select-country"> 
+                <option value="value1">Select your Country</option>
+                <option value="value2" selected>Ukraine</option>
+                <option value="value3">Canada</option>
+              </select>
+            <label for="city">CITY</label>
+            <input type="text" id="city" value="Kryviy Rig">
+            <label for="city">POSTAL CODE</label>
+            <input type="text" id="postal-code">
+            <label for="city">PHONE</label>
+            <input type="text" id="phone" value="+38(0_) ___ __ __" oninput="ValidPhone()">
+            <button>Find</button>
+            <a href="#">Return to shop</a>
+            <button id="continue" onclick="continueShipping()" disabled>Continue to Shipping</button>
+        </div>
+
+        <div id="Paris" class="tabcontent">
+            <h3>Shipping information</h3>
+            <h3>Shipping Method</h3>
+            <div class="method-item">
+                <input type="radio" name="type-delivery" id="standart" data-val="dstandart">
+                <label for="standart">Standart Delivery</label><span>Free</span>
+                <div class="del-info">
+                    Freebie checkout form of the third step in sketchup. Feel free to download and use it for your progect
+                </div>
+            </div>
+            <div class="method-item">
+                <input type="radio" name="type-delivery" id="fast" data-val="dfast">
+                <label for="fast">Fast Delivery</label><span>8.00 Uah</span>
+                <div class="del-info">
+                    Freebie checkout form of the third step in sketchup. Feel free to download and use it for your progect
+                </div>
+            </div>
+            <a href="#">Back to Customer Info</a>
+            <button id="contPay" onclick="continuePay()">Continue to payment</button>
+        </div>
+
+        <div id="Tokyo" class="tabcontent">
+            <h3>Payment selection</h3>
+        </div>
+    </div>
+
+
+
+
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>
